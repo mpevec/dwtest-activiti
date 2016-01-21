@@ -1,0 +1,12 @@
+server:
+  type: simple
+  applicationContextPath: /v2
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 9999
+activiti:
+  jdbcUrl: jdbc:postgresql://localhost:5432/activiti
+  jdbcUsername: activiti
+  jdbcPassword: activiti
+  jdbcDriver: org.postgresql.Driver

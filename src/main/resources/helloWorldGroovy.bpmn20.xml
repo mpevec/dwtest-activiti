@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+        xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+        xmlns:activiti="http://activiti.org/bpmn"
+        targetNamespace="http://www.activiti.org/bpmn2.0">
+
+    <process id="helloWorld">
+
+        <startEvent id="start" />
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="script" />
+        <scriptTask id="script" name="HelloWorld" scriptFormat="groovy">
+            <script>
+                System.out.println("Hello world")
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow2" sourceRef="script" targetRef="theEnd" />
+        <endEvent id="theEnd" />
+
+    </process>
+
+</definitions>
